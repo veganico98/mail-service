@@ -8,8 +8,8 @@ export class SendLoanConfirmationEmailUseCase {
   async execute(email: string, bookTitle: string) {
     return this.mailer.sendTemplate(
       email,
-      "📚 Confirmação de Empréstimo",
-      "loan-confirmation", // nome do template pug
+      "Confirmação de Empréstimo",
+      "loan-confirmation",
       { bookTitle }
     );
   }

@@ -5,7 +5,7 @@ import { MailModule } from "./modules/mail/infrastructure/mail.module";
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true, // 🔑 deixa .env acessível em toda a aplicação
+      isGlobal: true,
     }),
     MailModule,
   ],

@@ -9,7 +9,7 @@ export class SendWelcomeEmailUseCase {
     const html = `<h1>Bem-vindo, ${name}!</h1><p>Obrigado por se cadastrar em nossa biblioteca 🚀</p>`;
     await this.mailer.sendTemplate(
         email,
-    "Bem-vindo à Library 🚀",
+    "Bem-vindo à Library-Service",
     "welcome",
     { name }
 );

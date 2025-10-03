@@ -8,7 +8,7 @@ export class NodemailerService {
   private transporter;
 
   constructor() {
-  console.log("📧 Variáveis carregadas:", {
+  console.log("Variáveis carregadas:", {
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
     user: process.env.SMTP_USER,
@@ -45,10 +45,10 @@ async sendTemplate(
       html,
     });
 
-    console.log("📨 Email enviado:", result);
+    console.log("Email enviado:", result);
     return result;
   } catch (error) {
-    console.error("❌ Erro ao enviar email:", error);
+    console.error("Erro ao enviar email:", error);
     throw error;
   }
 }

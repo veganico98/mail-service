@@ -7,7 +7,7 @@ async function bootstrap() {
   transport: Transport.RMQ,
   options: {
     urls: [process.env.RABBITMQ_URL || "amqp://guest:guest@localhost:5672"],
-    queue: "mail_queue", // <- precisa ser o mesmo
+    queue: "mail_queue",
     queueOptions: { durable: true },
   },
 });
