@@ -81,6 +81,10 @@ services:
 # Subir os containers
 `docker-compose up -d`
 
+# MySQL
+- Crie um banco de dados com o nome library_service_db com: `CREATE DATABASE library_service_db;
+` 
+
 # Importe a postman collection
 - arquivo Library Service.postman_collection no repositório library-service
 - `Library Service.postman_collection` Todas as rotas já estão pré-setadas com exemplos para serem seguidos na collection.
@@ -108,5 +112,19 @@ SMTP_USER=SEU_USER_BREVO
 SMTP_PASS=SUA_SENHA_BREVO
 MAIL_FROM=seuemail@gmail.com
 ```
+# TypeORM
+##  1. Criar Migration
+Sempre que criar ou alterar uma entidade (`.entity.ts`), gere uma nova migration:
+
+```bash
+npx ts-node ./node_modules/typeorm/cli.js migration:generate ./src/migrations/NOME_DA_MIGRATION -d ./src/data-source.ts
+````
+
+## 2. Rodar Migration
+
+Para aplicar todas as migrations no banco de dados:
+
+npx ts-node ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts
+
 ---
 Após os passos acima, rode o projeto com `npm run start:dev` e teste as rotas importadas através da collection disponibilizada.
