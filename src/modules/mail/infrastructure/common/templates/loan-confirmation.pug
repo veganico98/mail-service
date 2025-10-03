@@ -1,9 +1,37 @@
 doctype html
 html
   head
-    title Confirmação de Empréstimo
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      h1 {
+        color: #27abe9;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+      }
   body
-    h1 Empréstimo confirmado!
-    p Olá, seu empréstimo foi registrado com sucesso.
-    p Livro: #{bookTitle}
-    p Boa leitura! 🚀
+    .container
+      h1 📚 Empréstimo Confirmado!
+      p Olá, seu empréstimo foi registrado com sucesso.
+      p 
+        strong Livro: 
+        | #{bookTitle}
+      p Boa leitura! 🚀
+      .footer
+        | Biblioteca Virtual © #{new Date().getFullYear()}
